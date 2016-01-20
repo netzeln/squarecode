@@ -1,6 +1,8 @@
+var newString;
+var roundString = 0;
 
 var formatString = function(string){
-  var newString = string.replace(/[^a-z]/gi,"").toLowerCase();
+  newString = string.replace(/[^a-z]/gi,"").toLowerCase();
     if (newString){
       return newString;
   } else {
@@ -11,7 +13,7 @@ var formatString = function(string){
 var mathString = function(newString) {
 
   var countString = newString.length;
-  var roundString = Math.ceil(Math.sqrt(countString));
+    roundString = Math.ceil(Math.sqrt(countString));
 
   if (newString){
     return roundString;
@@ -20,6 +22,32 @@ var mathString = function(newString) {
 }
 };
 
+
+var rectString = function(newString){
+
+  // for(var i = 0; i < newString.length; i++){
+  var characterPlace = newString.substr(0,roundString);
+  console.log(characterPlace);
+
+  if(characterPlace){
+    return characterPlace;
+  }else{
+    return false;
+  }
+// }
+};
+
+
+
+
+// var arrayThings = function(newString){
+//   var array = [];
+//   array = array.push(newString);
+//   // array = newString.push();
+//   console.log(newString);
+//   array.charAt(0,roundString);
+//   console.log(roundString);
+// };
 
 
 // $(document).ready(function() {
